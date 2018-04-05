@@ -1,0 +1,13 @@
+def findnumber(s):
+	n = s.split()
+	num = []
+	for number in n:
+		if number.isdigit():
+			num.append(number)
+			print(1)
+		print(2)
+	return num
+
+sentence = "I am 18 years old and I have 3 cats and my brothers are 19 11 and 6"
+num = findnumber(sentence)
+print num
