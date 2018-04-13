@@ -1,0 +1,14 @@
+import random
+
+def roll(beginning, end):
+	return random.randint
+def roundwinner
+	if rollresult1 > rollresult2:
+		player
+
+player1  = 0
+score2 = 0
+rollresult = 0
+rollresult = 0
+rolling = roll(1,6)
+print rolling
