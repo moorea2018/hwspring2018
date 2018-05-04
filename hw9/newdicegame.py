@@ -1,5 +1,8 @@
 import random
 
+player1 = raw_input ("Please enter player1 name")
+player2 = raw_input ("Please enter player2 name")
+player3 = raw_input ("Please enter player3 name")
 beginning = 1
 end = 9
 score1 = 0
@@ -37,7 +40,7 @@ def gameWinner(score1,score2):
 	elif(score3 > 2):
 		return "Tie Breaker"
 
-while score1 < 2 and score2 < 2 and score3 < 2:
+while score1 < 3 and score2 < 3 and score3 < 3:
 	roll1 = roll(beginning,end)
 	roll2 = roll(beginning,end)
 	roll3 = roll(beginning,end)
@@ -51,6 +54,27 @@ while score1 < 2 and score2 < 2 and score3 < 2:
 	rollresult2 = (roll4 + roll5 + roll6)
 	rollresult3 = (roll7 + roll8 + roll9)
 	print (rollresult1,rollresult2,rollresult3)
-#print(gameWin)
-#       gameWin = gameWinner(score1,score2)
-
+	if rollresult1 == 21:
+		score1 += 1
+		print player1
+		print "Wins The Game"
+	elif rollresult2 == 21:
+		score2 += 1
+		print player2
+		print "Wins The Game"
+	elif rollresult3 == 21:
+		score2 += 1
+		print player3
+		print "Wins The Game"
+if score1 > 2 or score2 > 2 or score3 > 2:
+	print ("Final Results")
+	print (score1,score2,score3)
+	if score1 == 3:
+		print player1
+		print "Wins The Match"
+	elif score2 == 3:
+		print player2
+		print "Wins The Match"
+	elif score3 == 3:
+		print player3
+		print "Wins The Match"
